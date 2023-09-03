@@ -95,6 +95,8 @@ body {
     width: 25px;
     height: 23px;
     line-height: 20px;
+    transform: rotate(0deg);
+    transition: all 200ms;
 }
 
 .todolist-body .list-title {
@@ -107,9 +109,6 @@ body {
     padding-left: 4px;
 }
 
-.todolist-body li:last-child {
-    margin-bottom: 40px;
-}
 
 /* ITEM CATEGORY STYLES */
  
@@ -181,41 +180,47 @@ body {
 }
 
 .todolist-body label {
+    display: inline-block;
     cursor: pointer;
-    position: relative;
-    left: -30px;
-    padding-left: 30px;
 }
 
 /* SELECT AND ANIMATE ARROW */
 
-.collapse-toggle:not(:checked) ~ div:nth-of-type(1) {
-    transform: rotate(0deg);
-    transition: all 200ms;
-}
-
-.collapse-toggle:checked ~ div:nth-of-type(1) {
+.collapse-toggle:checked ~ label .list-title-arrow {
     transform: rotate(-90deg);
     transition: all 200ms;
 }
 
 /* SELECT AND ANIMATE LIST CONTENTS */
 
-.collapse-toggle:not(:checked) ~ div:nth-of-type(2) {
+.collapsable {
+    display: grid;
     opacity: 1;
-    max-height: 100vh;
+    grid-template-rows: 1fr;
     transition: 
-    opacity 800ms 200ms,
-    max-height 800ms;
+    opacity 200ms 200ms ease-in-out,
+    grid-template-rows 200ms ease-in-out;
+    margin-bottom: 20px;
 }
 
-.collapse-toggle:checked ~ div:nth-of-type(2) {
+.collapsable ul {
+    overflow: hidden;
+}
+
+.collapse-toggle:checked ~ .collapsable {
     opacity: 0;
-    max-height: 0;
+    grid-template-rows: 0fr;
     transition: 
-    opacity 200ms,
-    max-height 500ms;
+    opacity 200ms ease-in-out,
+    grid-template-rows 200ms 200ms ease-in-out;
 }
 
+/* DEBUG */
 
+.debug label {
+    background-color: #acc8d1;
+}
 
+.debug .collapsable {
+    background-color: #e7cad9;
+}

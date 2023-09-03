@@ -6,7 +6,8 @@
     <title>TobooList</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+
+<body class="!debug">
 
     <!-- Page Header with Logo here -->
     <header class="main-header">
@@ -30,10 +31,13 @@
                 <div class="new-task">  
 
                     <input type="checkbox" class="collapse-toggle" id="new-task-toggle">                                
-                    <div class="list-title-arrow">&#9207;</div>
-                    <label for="new-task-toggle"><h1 class="list-title">New Task</h1></label>                    
+                    
+                    <label for="new-task-toggle">
+                        <div class="list-title-arrow">&#9207;</div>
+                        <h1 class="list-title">New Task</h1>
+                    </label>                    
 
-                    <div class="new-task-collapsable">
+                    <div class="collapsable">
                         <ul>
                             <li><span class="bullet-type item-complete">&#x2713;</span> Quarterly Newsletter <span class="list-tag list-tag-blue">Editorial</span></li>
                         </ul>
@@ -45,10 +49,13 @@
                 <div class="today">
                 
                     <input type="checkbox" class="collapse-toggle" id="today-toggle">
-                    <div class="list-title-arrow">&#9207;</div>
-                    <label for="today-toggle"><h1 class="list-title">Today</h1></label>
+                    
+                    <label for="today-toggle">
+                        <div class="list-title-arrow">&#9207;</div>
+                        <h1 class="list-title">Today</h1>
+                    </label>
 
-                    <div class="today-collapsable">
+                    <div class="collapsable">
                         <ul>
                             <li><span class="bullet-type item-complete">&#x2713;</span> Recruiting blog post <span class="list-tag list-tag-blue">Editorial</span></li>
                             <li><span class="bullet-type item-complete">&#x2713;</span> Mobile app launch <span class="list-tag list-tag-purple">Q1 Goals</span></li>
@@ -63,11 +70,14 @@
                 <div class="upcoming">        
                 
                     <input type="checkbox" class="collapse-toggle" id="upcoming-toggle">  
-                    <div class="list-title-arrow">&#9207;</div>
-                    <label for="upcoming-toggle"><h1 class="list-title">Upcoming</h1></label>
+                    
+                    <label for="upcoming-toggle">
+                        <div class="list-title-arrow">&#9207;</div>
+                        <h1 class="list-title">Upcoming</h1>
+                    </label>
 
 
-                    <div class="upcoming-collapsable">
+                    <div class="collapsable">
                         <ul>
                             <li><span class="bullet-type item-incomplete">&#x2717;</span> Schedule meeting with Alex </li>
                             <li><span class="bullet-type item-complete">&#x2713;</span> Homepage refresh <span class="list-tag list-tag-pink">Website</span></li>
